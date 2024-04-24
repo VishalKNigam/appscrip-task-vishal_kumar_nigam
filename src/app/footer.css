@@ -1,0 +1,141 @@
+footer {
+  background-color: black;
+}
+footer h3 {
+  text-transform: uppercase;
+  font-size: clamp(1rem, 1.4vw, 1.7rem);
+}
+.footer-container {
+  width: min(90%, 1240px);
+  margin-inline: auto;
+  padding: 7vw 1em 1em;
+  color: white;
+}
+
+.contact-info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  border-bottom: 2px solid white;
+  padding-bottom: 1.5em;
+  margin-bottom: 3em;
+}
+
+.subscribe-container {
+  display: grid;
+  gap: 1.5em;
+  align-self: start;
+}
+
+.form {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+}
+.form input,
+.subscribe-btn {
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.form input {
+  background-color: white;
+  flex-grow: 1;
+  max-width: 300px;
+}
+.subscribe-btn {
+  text-transform: uppercase;
+  border: 1px solid gray;
+  color: gray;
+  cursor: pointer;
+}
+
+.contact-details-container {
+  display: grid;
+  gap: 2em;
+}
+.contact-us,
+.currency {
+  display: grid;
+  gap: 1em;
+}
+
+.currency-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.contact-us p,
+.transactions-info,
+.subscribe-container p,
+.copyrights,
+.footer-links li {
+  color: rgb(170, 170, 170);
+}
+.contact-us div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.transactions-info {
+  font-size: clamp(0.8rem, 1.05vw, 1rem);
+}
+
+.additional-info-container {
+  padding-bottom: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2em;
+}
+.meta-muse-container h3 {
+  text-transform: lowercase;
+  font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+}
+.footer-links {
+  margin-top: 1em;
+}
+.footer-links li {
+  margin-bottom: 0.7em;
+  cursor: pointer;
+}
+
+footer select {
+  color: white;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  background-color: black;
+  display: none;
+}
+.copyrights {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    width: min(100%, 1240px);
+  }
+  .contact-info-container {
+    grid-template-columns: 1fr;
+  }
+  .subscribe-container {
+    border-bottom: 1px solid white;
+    padding-block-end: 1.5em;
+    place-items: center;
+  }
+  .form {
+    justify-content: center;
+  }
+  .contact-us div {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .transactions-info {
+    display: none;
+  }
+}

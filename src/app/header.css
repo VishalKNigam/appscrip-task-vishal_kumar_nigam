@@ -1,0 +1,126 @@
+.header {
+  padding-block: 2em 1em;
+  position: relative;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-bottom: 2em; */
+}
+.logo-with-hamburger-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu-toggle-btn {
+  display: none;
+}
+
+.logo-title {
+  position: absolute;
+  top: 1em;
+  width: 100%;
+  text-align: center;
+  z-index: 9;
+  font-size: clamp(1.7rem, 2.5vw, 2.7rem);
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 99;
+}
+
+.large-screen-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2em;
+}
+.small-screen-nav-container {
+  display: none;
+}
+nav a {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+}
+.menu-items svg {
+  width: 20px;
+  height: 20px;
+}
+select {
+  font-weight: bold;
+}
+.hide-search {
+  transform: translateX(650%) !important;
+}
+.show-search {
+  border: 1px solid lightgray;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease-in;
+  background-color: white;
+}
+.active {
+  color: blue;
+}
+
+@media screen and (max-width: 640px) {
+  .menu-toggle-btn {
+    display: block;
+    z-index: 999;
+  }
+  .profile-lg,
+  .select-lg {
+    display: none;
+  }
+  .select-sm {
+    max-width: 100px;
+    display: block;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+  }
+  .profile-sm {
+    display: flex;
+    align-items: flex-end;
+  }
+  .menu-toggle-btn svg,
+  .logo {
+    width: 25px;
+    height: 25px;
+  }
+  .large-screen-nav-container {
+    display: none;
+  }
+  .small-screen-nav-container {
+    position: absolute;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 10px;
+    transform: translateX(-150%);
+    transition: transform 0.3s ease-in-out;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    z-index: 999;
+  }
+  .small-screen-nav-container a {
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    transition: background 0.2s ease-in;
+  }
+  .small-screen-nav-container a:hover {
+    background-color: #e2e8ed;
+  }
+  .expand {
+    transform: translateX(-6%);
+  }
+}
